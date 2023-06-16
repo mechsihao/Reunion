@@ -329,7 +329,7 @@ object Reunion {
    *
    * 目前支持的聚合函数为：("avg", "sum", "count", "max", "min", "collect_list", "collect_set")
    *
-   * @author 李思浩 (80302421)
+   * @author MECH，欢迎关注知乎：MECH
    * @param inputDf DataFrame 输入数据[DataFrame]
    * @param table String 输入数据[表名]，inputDf和table只能输入一个，table可以是hive表，也可以是全局临时表，即.createGlobalTempView()得到的表
    * @param whereStr String 条件语句
@@ -394,7 +394,7 @@ object Reunion {
    * @example 示例2，输入hive表：
    * {{{
    * groupByReunion(
-   *   table = "ad_tag.f_tag_dict_recall",
+   *   table = "db.table",
    *   whereStr = "dayno=20220628 and key_type='query'",
    *   selectColsFun = Array(
    *     "group by search_key",
@@ -422,7 +422,7 @@ object Reunion {
    * val startDayno = "20220704"
    * val dayno = "20220711"
    * val dfBsExp = groupByReunion(
-   *   table = "ad.f_ads_bs_js_exp",
+   *   table = "db.table",
    *   selectColsFun = Array(
    *    "group by if(trim(rkw)='', trim(kw), trim(rkw)) as keyword",
    *    "group by adid as ad_id",
